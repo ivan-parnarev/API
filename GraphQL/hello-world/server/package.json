@@ -1,0 +1,9 @@
+{
+  "name": "hellow-world-server",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^4.7.0",
+    "graphql": "^16.6.0"
+  }
+}
