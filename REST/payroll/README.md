@@ -18,11 +18,9 @@ POST:
 curl -X POST localhost:8080/employees -H 'Content-type:application/json' -d '{"name": "George Buh", "role": "president"}'
 curl -v -X POST localhost:8080/employees -H 'Content-Type:application/json' -d '{"firstName": "George", "lastName": "Buh", "role": "president"}'
 
-
 PUT:
 curl -X PUT localhost:8080/employees/3 -H 'Content-type:application/json' -d '{"name": "George Buh", "role": "soldier"}'
 curl -v -X PUT localhost:8080/employees/3 -H 'Content-Type:application/json' -d '{"firstName": "George", "lastName": "Popo", "role": "soldier"}'
-
 
 DELETE:
 curl -X DELETE localhost:8080/employees/3
