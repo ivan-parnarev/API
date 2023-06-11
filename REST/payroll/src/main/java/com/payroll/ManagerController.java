@@ -61,8 +61,8 @@ class ManagerController {
                 assembler.toModel(repository.findByEmployeesId(id)));
     }
 
-    @DeleteMapping("/employees/{id}")
-    ResponseEntity<?> deleteEmployee(@PathVariable Long id) {
+    @DeleteMapping("/managers/{id}")
+    ResponseEntity<?> deleteManager(@PathVariable Long id) {
 
         repository.deleteById(id);
 
