@@ -5,31 +5,29 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Data
 @Entity
 @NoArgsConstructor
-class Employee {
+class Manager {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String role;
 
     /**
-     * To break the recursive, bi-directional relationship, don't serialize {@literal manager}.
+     * To break the recursive, bi-directional interface, don't serialize {@literal employees}.
      */
-    @JsonIgnore
-    @OneToOne
-    private Manager manager;
+    @JsonIgnore //
+    @OneToMany(mappedBy = "manager") //
+    private List<Employee> employees = new ArrayList<>();
 
-    Employee(String name, String role, Manager manager) {
-
+    Manager(String name) {
         this.name = name;
-        this.role = role;
-        this.manager = manager;
     }
 
     public Optional<Long> getId() {

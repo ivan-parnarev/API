@@ -25,7 +25,6 @@ curl -v -X PUT localhost:8080/employees/3 -H 'Content-Type:application/json' -d 
 DELETE:
 curl -X DELETE localhost:8080/employees/3
 
-
 Quickstart:
 
 1. Clone repository.

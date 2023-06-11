@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.payroll</groupId>
-	<artifactId>employees</artifactId>
+	<artifactId>payroll</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employees</name>
+	<name>payroll</name>
 	<description>RESTful API - Implementation</description>
 	<properties>
 		<java.version>17</java.version>
@@ -29,6 +29,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.atteo</groupId>
+			<artifactId>evo-inflector</artifactId>
+			<version>1.3</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -40,7 +45,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

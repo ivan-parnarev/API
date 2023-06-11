@@ -1,7 +1,11 @@
 package com.payroll;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-interface EmployeeRepository extends JpaRepository<Employee, Long> {
+import java.util.List;
+
+interface EmployeeRepository extends CrudRepository<Employee, Long> {
+
+    List<Employee> findByManagerId(Long id);
 
 }
