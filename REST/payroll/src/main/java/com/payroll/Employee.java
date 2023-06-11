@@ -22,7 +22,7 @@ class Employee {
      * To break the recursive, bi-directional relationship, don't serialize {@literal manager}.
      */
     @JsonIgnore
-    @OneToOne
+    @ManyToOne
     private Manager manager;
 
     Employee(String name, String role, Manager manager) {

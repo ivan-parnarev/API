@@ -16,12 +16,12 @@ class DatabaseLoader {
             /*
              * Gather Elon's team
              */
-            Manager manager = managerRepository.save(new Manager("Elon Musk"));
+            Manager manager = managerRepository.save(new Manager("Elon"));
 
             Employee emp1 = employeeRepository.save(new Employee("Ivan", "CTO", manager));
-//            Employee emp2 = employeeRepository.save(new Employee("Elena", "CEO", manager));
+            Employee emp2 = employeeRepository.save(new Employee("Elena", "CEO", manager));
 
-            manager.setEmployees(Arrays.asList(emp1));
+            manager.setEmployees(Arrays.asList(emp1, emp2));
             managerRepository.save(manager);
 
             /*
